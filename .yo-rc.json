@@ -1,0 +1,22 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "authenticationType": "jwt",
+    "baseName": "cdex",
+    "buildTool": "maven",
+    "cacheProvider": "ehcache",
+    "clientFramework": "angular",
+    "databaseType": "sql",
+    "devServerPort": 4200,
+    "entities": ["Chat", "Provider", "Client", "Delivery", "Beneficiary", "Shipment", "Notification", "Product"],
+    "jhipsterVersion": "8.5.0",
+    "jwtSecretKey": "N2UxN2I4MTZmMDEwY2RjMGQxMWIyMTY0MTI1OTQ4NDYwZWJiMTM2MzI0MWRjMDcwNDhmNmQ0MzQ0M2QyYzViYWYyNGI5YWVlYjg4ZjY4NzRkYzcxOWE2Zjc1NDc1OWQ2OTc4ZTZlMmJhMzMzYjY3MmI1OGE1ZmRhYjQ4YTkzYjM=",
+    "languages": ["es", "en"],
+    "lastLiquibaseTimestamp": 1718562218000,
+    "nativeLanguage": "es",
+    "packageFolder": "com/jacdl",
+    "packageName": "com.jacdl",
+    "prodDatabaseType": "postgresql",
+    "reactive": false
+  }
+}
