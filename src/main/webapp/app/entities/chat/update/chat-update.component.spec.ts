@@ -49,14 +49,14 @@ describe('Chat Management Update Component', () => {
   describe('ngOnInit', () => {
     it('Should call User query and add missing value', () => {
       const chat: IChat = { id: 456 };
-      const from: IUser = { id: 974 };
-      chat.from = from;
+      const source: IUser = { id: 974 };
+      chat.from = source;
       const to: IUser = { id: 27026 };
       chat.to = to;
 
       const userCollection: IUser[] = [{ id: 23108 }];
       jest.spyOn(userService, 'query').mockReturnValue(of(new HttpResponse({ body: userCollection })));
-      const additionalUsers = [from, to];
+      const additionalUsers = [source, to];
       const expectedCollection: IUser[] = [...additionalUsers, ...userCollection];
       jest.spyOn(userService, 'addUserToCollectionIfMissing').mockReturnValue(expectedCollection);
 
@@ -73,15 +73,15 @@ describe('Chat Management Update Component', () => {
 
     it('Should update editForm', () => {
       const chat: IChat = { id: 456 };
-      const from: IUser = { id: 20983 };
-      chat.from = from;
+      const source: IUser = { id: 20983 };
+      chat.from = source;
       const to: IUser = { id: 32555 };
       chat.to = to;
 
       activatedRoute.data = of({ chat });
       comp.ngOnInit();
 
-      expect(comp.usersSharedCollection).toContain(from);
+      expect(comp.usersSharedCollection).toContain(source);
       expect(comp.usersSharedCollection).toContain(to);
       expect(comp.chat).toEqual(chat);
     });

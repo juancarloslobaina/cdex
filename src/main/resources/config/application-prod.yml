@@ -33,9 +33,9 @@ spring:
       enabled: false
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/cdex
-    username: cdex
-    password:
+    url: jdbc:postgresql://ep-wandering-dawn-a54d2c89.us-east-2.aws.neon.tech/cdex?sslmode=require
+    username: cdex_owner
+    password: Idi3OkXm5qxw
     hikari:
       poolName: Hikari
       auto-commit: false
